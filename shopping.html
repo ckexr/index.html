@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="items.html">Items</a></li>
+                <li><a href="shopping.html">Shopping</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Choose items to buy</h2>
+        <form id="shopping-form">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sum</th>
+                </tr>
+                <tr>
+                    <td>Item 1</td>
+                    <td>$100</td>
+                    <td><input type="number" id="product1-qty" value="0" onchange="calculateTotal()"></td>
+                    <td id="product1-total">$0</td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td>$150</td>
+                    <td><input type="number" id="product2-qty" value="0" onchange="calculateTotal()"></td>
+                    <td id="product2-total">$0</td>
+                </tr>
+            </table>
+            <h3>Overall price: $<span id="total-price">0</span></h3>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Shop | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
