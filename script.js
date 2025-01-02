@@ -76,10 +76,8 @@ function handleFormSubmit(event) {
     )
   ) {
     alert('Thank you for your purchase!');
-    // Add any further processing, like sending data to a server
   } else {
     alert('Transaction cancelled.');
-    // Add any cancellation handling logic
   }
 }
 
