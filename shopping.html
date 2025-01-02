@@ -23,7 +23,7 @@
     </header>
     <section>
         <h2>Choose items to buy</h2>
-        <form id="shopping-form">
+        <form id="shopping-form" onsubmit="handleFormSubmit(event)">
             <table>
                 <tr>
                     <th>Item</th>
@@ -34,16 +34,17 @@
                 <tr>
                     <td>Item 1</td>
                     <td>$100</td>
-                    <td><input type="number" id="product1-qty" value="0" onchange="calculateTotal()"></td>
+                    <td><input type="number" id="product1-qty" value="0" min="0" onchange="updateProductTotal(1)"></td>
                     <td id="product1-total">$0</td>
                 </tr>
                 <tr>
                     <td>Item 2</td>
                     <td>$150</td>
-                    <td><input type="number" id="product2-qty" value="0" onchange="calculateTotal()"></td>
+                    <td><input type="number" id="product2-qty" value="0" min="0" onchange="updateProductTotal(2)"></td>
                     <td id="product2-total">$0</td>
                 </tr>
             </table>
+            <button type="submit">Buy</button>
             <h3>Overall price: $<span id="total-price">0</span></h3>
         </form>
     </section>
