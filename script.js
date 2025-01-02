@@ -1,4 +1,3 @@
-// Shopping Page JavaScript: Calculate Total
 function calculateTotal() {
   const product1Qty = document.getElementById('product1-qty').value;
   const product2Qty = document.getElementById('product2-qty').value;
@@ -20,7 +19,6 @@ function calculateTotal() {
   document.getElementById('total-price').textContent = totalPrice;
 }
 
-// Contact Form Validation
 function validateForm() {
   const firstName = document.getElementById('first-name').value;
   const lastName = document.getElementById('last-name').value;
