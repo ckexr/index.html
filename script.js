@@ -9,7 +9,14 @@ function calculateTotal() {
   document.getElementById('product1-total').textContent = `$${product1Total}`;
   document.getElementById('product2-total').textContent = `$${product2Total}`;
 
-  const totalPrice = product1Total + product2Total;
+  let totalPrice = product1Total + product2Total;
+
+  if (totalPrice < 200) {
+    totalPrice += totalPrice * 0.15; // Apply 15% tax
+  } else {
+    totalPrice -= totalPrice * 0.15; // Apply 15% discount
+  }
+
   document.getElementById('total-price').textContent = totalPrice;
 }
 
